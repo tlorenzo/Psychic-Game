@@ -1,3 +1,9 @@
+//Both Bootstrap and Vanilla CSS Portfolios have been updated.
+//Find both links here:
+//https://tlorenzo.github.io/Bootstrap-Portfolio/portfolio.html
+//https://tlorenzo.github.io/Responsive-Portfolio/Basic-Portfolio/portfolio.html
+
+
 var alphabetSoup = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var wins = 0;
@@ -42,7 +48,7 @@ document.onkeyup = function (event) {
 
 
 
-    if (humanChoice == letterLottery) {
+    if (humanChoice == letterLottery && alphabetSoup.indexOf(humanChoice) >= 0) {
         wins++;
         gamesPlayed++;
         document.getElementById("message").innerHTML = "Yes! I was thinking of " + letterLottery + "! <br>You have guessed correctly! <br>Press any letter to play another game.";
@@ -60,7 +66,7 @@ document.onkeyup = function (event) {
 
 
 
-    if (guessesLeft == 0) {
+    if (guessesLeft == 0 ) {
         losses++;
         gamesPlayed++;
         guessesLeft = 10;
